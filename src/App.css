@@ -54,12 +54,12 @@ a{
   color:#000;
 }
 
-.fab{
+.fab , .far{
   font-size:3rem;
   transition: 0.3s ease;
 }
 
-.fab:hover{
+.fab:hover, .far:hover{
   opacity:0.6;
 }
 
@@ -168,7 +168,7 @@ footer a{
     font-size:1.3rem;
   }
 
-  .fab{
+  .fab, .far{
     font-size:2rem;
   }
 }

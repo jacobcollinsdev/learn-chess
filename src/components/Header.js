@@ -8,6 +8,8 @@ const Header = () =>{
                 <ul>
                     <li className="list-item"><a href="https://github.com/jacobcollinsdev" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a></li>
                     <li className="list-item"><a href="https://twitter.com/jacobcollinsdev" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square"></i></a></li>
+                    <li className="list-item"><a href="https://www.jacobcollinsdev.com" target="_blank" rel="noopener noreferrer"><i class="far fa-id-card"></i></a></li>
+                    
                 </ul>
             </div>
         </header>
