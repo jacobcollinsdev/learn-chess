@@ -116,6 +116,10 @@ section{
   overflow-y: scroll;
 }
 
+.overflow p{
+  margin-top: 2em;
+}
+
 .card:hover{
   transform:rotateY(180deg);
 }
