@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto&display=swap');
+
+* {
+  padding:0;
+  margin: 0;
+  box-sizing:border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family:'Roboto', Arial, Helvetica;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2, header {
+  font-family:'Montserrat', Arial, Helvetica;
+  font-weight:900;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2{
+  font-size:1.5rem;
+  margin-top: 1em;
+}
+
+p, li{
+  font-size:1rem;
+  margin:1em 0;
+  line-height: 140%;
+}
+
+img{
+  height:150px;
+}
+
+header{
+  font-weight:bold;
+  padding:1em;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* border:2px solid red; */
+}
+
+ul{
+  list-style: none;
+}
+
+.list-item{
+  display: inline;
+}
+
+.list-item + .list-item{
+  margin-left: 1em;
+}
+
+a{
+  color:#000;
+}
+
+.fab{
+  font-size:3rem;
+  transition: 0.3s ease;
+}
+
+.fab:hover{
+  opacity:0.6;
+}
+
+section{
+  padding:0em 2em;
+}
+
+.grid{
+  display: grid;
+  max-width: 1000px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin:auto;
+}
+
+.card-container{
+  position:relative;
+  /* width:300px;
+  min-width: 250px; */
+  height:400px;
+  cursor:pointer;
+  margin:2em 1em;
+}
+
+.card{
+  position: absolute;
+  height:100%;
+  width:100%;
+  transform-style:preserve-3d;
+  transition:all 0.5s ease;
+  box-shadow:10px 10px 20px rgba(0,0,0,0.25);
+  border-radius:20px;
+}
+
+.card-front, .card-back{
+  position: absolute;
+  height:100%;
+  width:100%;
+  backface-visibility: hidden;
+  border-radius:20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size:2em;
+  border:1px solid #e5e5e5;
+  flex-direction:column;
 }
 
-.App-link {
-  color: #61dafb;
+.card-back{
+  transform:rotateY(180deg);
+  padding:1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.overflow{
+  overflow-y: scroll;
+}
+
+.card:hover{
+  transform:rotateY(180deg);
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding:1em;
+  margin-top: 1em;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+@media screen and (max-width:1000px){
+  .grid{
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  footer{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer a{
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (max-width:700px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width:500px){
+  p, li{
+    font-size:0.8rem;
+  }
+
+  h1{
+    font-size:1.7rem;
+  }
+
+  h2{
+    font-size:1.3rem;
+  }
+
+  .fab{
+    font-size:2rem;
   }
 }
