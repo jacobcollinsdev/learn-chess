@@ -78,7 +78,7 @@ section{
   position:relative;
   /* width:300px;*/
   height:400px;
-  /* cursor:pointer; */
+  cursor:pointer;
   margin:2em 1em;
 }
 
